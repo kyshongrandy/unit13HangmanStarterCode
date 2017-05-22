@@ -16,23 +16,24 @@ var secretWord = null;
 // call the drawWord() function
 // call the drawHangman() function
 function prepareGame() {
-  secretWord = ['J','A','V','A','S','C','R', 'I', 'P', 'T'];
-
-    
-  
+  secretWord = ['D','E','A','T','H','B','O', 'M', 'B', '7','8','9'];
+correctGuesses=[]
+wrongGuesses=[]
+  drawWord()
+  drawHangman()
 }
 
 // in this onWin() function below 
 // 1. alert "You won!"
 function onWin() {
-  
+  alert("you did the winings!!!!!!!!!!!!!!!!");
   
 }
 
 // in this onLose() function below 
 // 1. alert "You lost!"
 function onLose() {
-  
+  alert("wasted")
   
   
 }
@@ -43,7 +44,9 @@ function onLose() {
 //    a. if correctGuesses does not include the letter (!) set variable hasAll to false
 // 3. return hasAll
 function checkIfWon() {  
-  
+    var hasAll= true           
+    var secretWord
+  if(correctGuesses=="secretWord")
   
   
 }
@@ -52,8 +55,12 @@ function checkIfWon() {
 // 1. declare a variable misses and set it equal to the length of wrongGuesses array
 // 2. if misses is less than 6 return false else return true
 function checkIfLost() {
+    var misses= fasle.length
+    if(num > 6){ return true;
+    } else {return false;}  
+    
   
-  
+
   
   
 }
@@ -134,6 +141,7 @@ function onKeyDown(event) {
 // Initialize a jQuery keydown event handler 
 //       (Keydown function should take onKeyDown function as an argument)
 $(document).ready(function() {
- 
+ prepareGame();
+ console.log(secretWord)
   
 });
